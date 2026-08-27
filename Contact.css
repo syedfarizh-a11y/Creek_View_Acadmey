@@ -26,74 +26,113 @@ body {
     flex-direction: column-reverse;
 }
 
-/* =========================
-   HEADER & NAVBAR
-========================= */
+/* Header & Navbar */
+        header {
+            background-color: rgb(208, 32, 35);
+            padding: 15px 0;
+            position: relative;
+        }
 
-header {
-    background-color: rgb(208, 32, 35);
-    padding: 15px 0;
-    position: relative;
-    width: 100%;
-    z-index: 100;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-header .containers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .logo img {
+            width: 90px;
+            height: auto;
+            display: block;
+        }
 
-.logo img {
-    width: 90px;
-    height: auto;
-    display: block;
-}
+        /* Desktop Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    align-items: center;
-}
+        nav li a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
 
-nav li a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #fff;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
+        nav li a:hover {
+            color: #000;
+        }
 
-nav li a:hover {
-    color: #000;
-}
+        .icons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
 
-.icons {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
+        .icons i {
+            font-size: 20px;
+            color: #fff;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
 
-.icons i {
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-}
+        .icons i:hover {
+            color: #000;
+        }
 
-.menu-toggle {
-    display: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-}
+        /* Mobile Menu Toggle Button (Default Hidden) */
+        .menu-toggle {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
-/* =========================
-   BREADCRUMB
-========================= */
+        /* Mobile Responsive Styles */
+        @media (max-width: 850px) {
+            .menu-toggle {
+                display: block; /* Show hamburger icon on mobile */
+            }
 
+            /* Hide Desktop Navigation & converts to Mobile Menu Dropdown */
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgb(180, 25, 28);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                padding: 15px 0;
+                z-index: 1000;
+            }
+
+            /* Show Menu when active class is added via JS */
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav li a {
+                display: block;
+                padding: 8px 0;
+            }
+
+            /* Hide social icons on small screens to save space */
+            .icons {
+                display: ;
+            }
+        }
 .breadcrumb {
     background: #f7f7f7;
     padding: 18px 0;
