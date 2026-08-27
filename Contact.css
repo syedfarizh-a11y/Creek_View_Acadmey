@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL RESET & VARIABLES
+   GLOBAL RESET & BASE
 ========================= */
 
 * {
@@ -14,6 +14,7 @@ body {
     color: #222;
     line-height: 1.5;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -22,7 +23,6 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-
 
 /* =========================
    HEADER & NAVBAR
@@ -42,14 +42,12 @@ header .container {
     align-items: center;
 }
 
-/* Logo */
 .logo img {
     width: 90px;
     height: auto;
     display: block;
 }
 
-/* Desktop Navigation */
 nav ul {
     display: flex;
     list-style: none;
@@ -69,7 +67,6 @@ nav li a:hover {
     color: #000;
 }
 
-/* Header Icons */
 .icons {
     display: flex;
     gap: 12px;
@@ -79,15 +76,9 @@ nav li a:hover {
 .icons i {
     font-size: 20px;
     color: #fff;
-    transition: color 0.3s ease;
     cursor: pointer;
 }
 
-.icons i:hover {
-    color: #000;
-}
-
-/* Mobile Toggle */
 .menu-toggle {
     display: none;
     color: #fff;
@@ -96,7 +87,6 @@ nav li a:hover {
     background: transparent;
     border: none;
 }
-
 
 /* =========================
    BREADCRUMB
@@ -130,7 +120,6 @@ nav li a:hover {
     color: #222;
 }
 
-
 /* =========================
    CONTACT SECTION MAIN LAYOUT
 ========================= */
@@ -138,9 +127,10 @@ nav li a:hover {
 .contact-section {
     padding: 50px 0 70px;
     width: 100%;
+    overflow: hidden;
 }
 
-/* Desktop layout: Side-by-Side (Cards on Left, Form on Right) */
+/* Desktop: Flex Row (Cards on Left, Form on Right) */
 .contact-section .container {
     display: flex;
     flex-direction: row;
@@ -148,28 +138,31 @@ nav li a:hover {
     align-items: flex-start;
 }
 
-
-/* =========================
-   INFO CARDS (LEFT COLUMN)
-========================= */
-
 .contact-info {
     flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.form-wrapper {
+    flex: 1.5;
     width: 100%;
 }
+
+/* =========================
+   INFO CARDS
+========================= */
 
 .info-card {
     border: 1px solid #e1e1e1;
     border-radius: 8px;
-    min-height: 180px;
     padding: 25px 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: #fff;
-    word-break: break-word; /* Prevents overflow from long emails */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    word-wrap: break-word;
 }
 
 .info-card:hover {
@@ -202,20 +195,13 @@ nav li a:hover {
     color: #555;
 }
 
-
 /* =========================
-   FORM CONTAINER (RIGHT COLUMN)
+   FORM STYLING
 ========================= */
-
-.form-wrapper {
-    flex: 1.5;
-    width: 100%;
-}
 
 .form-heading {
     text-align: center;
-    max-width: 100%;
-    margin: 0 auto 30px;
+    margin-bottom: 30px;
 }
 
 .form-heading span {
@@ -337,18 +323,12 @@ nav li a:hover {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease;
 }
 
 .button-area button i {
     margin-left: 8px;
 }
-
-.button-area button:hover {
-    background: #722b3d;
-    transform: translateY(-2px);
-}
-
 
 /* =========================
    MAP / CTA SECTION
@@ -395,24 +375,14 @@ nav li a:hover {
     border-radius: 6px;
     font-size: 14px;
     font-weight: bold;
-    transition: background 0.3s ease;
     display: inline-block;
 }
 
-.map-button:hover {
-    background: #722b3d;
-}
-
-.map-button i {
-    margin-left: 7px;
-}
-
-
 /* =========================
-   MEDIA QUERIES (RESPONSIVE)
+   RESPONSIVE MEDIA QUERIES
 ========================= */
 
-/* Mobile Navigation Breakpoint */
+/* Mobile Nav Toggle Breakpoint */
 @media (max-width: 850px) {
     .menu-toggle {
         display: block;
@@ -439,52 +409,38 @@ nav li a:hover {
         text-align: center;
     }
 
-    nav li a {
-        display: block;
-        padding: 8px 0;
-    }
-
     .icons {
         display: none;
     }
 }
 
-/* Tablet & Mobile Breakpoint (Max-width: 900px) */
-@media (max-width: 900px) {
+/* Mobile Layout Fix (Max-width: 850px) */
+@media (max-width: 850px) {
     .contact-section .container {
-        flex-direction: column; /* Stacks Cards & Form vertically on Mobile */
+        flex-direction: column; /* Stacks Cards & Form vertically */
         gap: 40px;
     }
 
     .contact-info, 
     .form-wrapper {
         width: 100%;
-        flex: none;
     }
 }
 
-/* Mobile Screens (Max-width: 600px) */
+/* Small Screens Mobile (Max-width: 600px) */
 @media (max-width: 600px) {
     .container {
-        width: 92%;
+        width: 95%;
         padding: 0 10px;
     }
 
-    .contact-section {
-        padding: 30px 0 45px;
-    }
-
     .form-row {
-        grid-template-columns: 1fr; /* Form inputs stack in 1 column */
+        grid-template-columns: 1fr; /* Form inputs single column */
         gap: 14px;
     }
 
     .form-heading h2 {
         font-size: 22px;
-    }
-
-    .form-heading p {
-        font-size: 13px;
     }
 
     .button-area button {
@@ -495,10 +451,6 @@ nav li a:hover {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
-    }
-
-    .map-content h2 {
-        font-size: 20px;
     }
 
     .map-button {
