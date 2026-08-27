@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+       <!-- CountUp.js Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
+
+ <style>
+    
+
+        .stats{
+            display:flex;
+            justify-content:center;
+            gap:60px;
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        .stat-box h2{
+            font-size:50px;
+            color:#003366;
+            margin-bottom:10px;
+        }
+
+        .stat-box p{
+            font-size:18px;
+            color:#555;
+        }
+    </style>
+</head>
+<body>
+  <header>
+        <div class="container">
+            <div class="logo">
+             <a href="index.html"><img src="Images/logo.png" alt="Logo"></a>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav id="nav-menu">
+                <ul>
+               <li><a href="index.html">Home</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="Acadmeic.html">Academic</a></li>
+                    <!-- <li><a href="#">Admission</a></li> -->
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Student_Activities.html">Student Activities</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- JS script menu toggle karne ke liye -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+    <main>
+            <section>
+                <div class="hero-container">
+                    <div class="hero">
+                        <h1>Welcome to Creek View Academy</h1>
+                        <h2>Inspiring Excellence, Building Bright Futures.</h2>
+                        <p>We provide quality education in a safe, caring, and inspiring<br> environment
+                             where every student can grow and succeed.</p>
+<div class="buttons">
+    <button class="button1">Explore More</button>
+        <button class="button2" ><a href="Contact.html">Contact Us</a></button>
+
+</div>
+                    </div>
+                </div>
+        
+
+
+
+<div class="stats">
+
+    <div class="stat-box">
+        <h2><span id="years">0</span>+</h2>
+        <p>Years of Excellence</p>
+    </div>
+
+    <div class="stat-box">
+        <h2><span id="students">0</span>+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat-box">
+        <h2><span id="result">0</span>%</h2>
+        <p>Board Result Rate</p>
+    </div>
+
+</div>
+<div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Modern Computer & Science Labs</h3>
+                    <p>Fully equipped labs for practical learning.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Qualified and Experienced Staff</h3>
+                    <p>Dedicated teachers promoting overall student growth.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <h3>Safe & Secure Environment</h3>
+                    <p>CCTV surveillance and a secure environment in school.</p>
+                </div>
+            </div>
+<div class="admin">
+    <div class="admin1">
+<h1>Call to Action (CTA):"Apply for Admission"</h1>
+<button class="buttonss"><a href="Contact.html">Contact Us</a></button>
+    </div>
+</div>
+<div class="enter">
+    <div class="content">
+        <div class="content1">
+            <h1>Where Education Meets Nature</h1>
+            <h3>Discover New Horizons of Learning</h3>
+            <p>At Creek View Academy, education extends far beyond traditional classrooms and textbooks. Through our Nature & Learning Center, 
+                we immerse students in an environment that fosters curiosity, environmental stewardship, and real-world understanding. By blending 
+                academic lessons with interactive, outdoor
+                 learning experiences, we inspire young minds to observe, question, and appreciate the world around them from an entirely fresh perspective.</p>
+          <div class="buttons3">
+                            <button><a href="About Us.html">Learn more About Us</a></button>
+
+          </div>
+
+                </div>
+        <div class="content2">
+            <img src="Images/Enviromrnt.png">
+        </div>
+    </div>
+</div>
+
+            </section>
+    </main>
+   <script>
+window.onload = function () {
+
+    const years = new countUp.CountUp("years", 15);
+    const students = new countUp.CountUp("students", 1000);
+    const result = new countUp.CountUp("result", 100);
+
+    years.start();
+    students.start();
+    result.start();
+
+};
+</script>
+
+</body>
+</main>
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- About / Contact -->
+        <div class="footer-about">
+            <h2>MySchool</h2>
+
+            <p>
+                Crafting exceptional digital experiences through
+                thoughtful design and innovative solutions that
+                elevate your brand presence.
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">⌖</span>
+                    <span>123 Creative Boulevard, Design District, NY 10012</span>
+                </div>
+
+                <div class="contact-item">
+                    <span class="icon">⌕</span>
+                    <span>+1 (555) 987-6543</span>
+                </div>
+
+                <div class="contact-item">
+                    <span class="icon">✉</span>
+                    <span>hello@designstudio.com</span>
+                </div>
+            </div>
+        </div>
+</div>
+
+        <!-- Studio -->
+        <div class="footer-column">
+            <h3>Creek View Acadmey</h3>
+
+            <a href="About Us.html">Our Story</a>
+            <a href="#">Design Process</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Case Studies</a>
+            <a href="#">Awards</a>
+        </div>
+
+
+        <!-- Services -->
+        <div class="footer-column">
+            <h3>Services</h3>
+
+            <a href="#">Brand Identity</a>
+            <a href="#">Web Design</a>
+            <a href="#">Mobile Apps</a>
+            <a href="#">Digital Strategy</a>
+            <a href="#">Consultation</a>
+        </div>
+
+
+        <!-- Resources -->
+        <div class="footer-column">
+            <h3>Resources</h3>
+
+            <a href="#">Design Blog</a>
+            <a href="#">Style Guide</a>
+            <a href="#">Free Assets</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Inspiration</a>
+        </div>
+
+
+        <!-- Connect -->
+        <div class="footer-column">
+            <h3>Connect</h3>
+
+            <a href="#">Start Project</a>
+            <a href="#">Schedule Call</a>
+            <a href="#">Join Newsletter</a>
+            <a href="#">Follow Updates</a>
+            <a href="#">Partnership</a>
+        </div>
+
+    </div>
+
+
+    <!-- Newsletter / Social -->
+    <div class="footer-middle">
+
+        <div class="newsletter">
+            <h3>Stay Inspired</h3>
+
+            <p>
+                Subscribe to receive design insights and
+                creative inspiration delivered monthly.
+            </p>
+        </div>
+
+        <div class="social-links">
+            <a href="#">◉ Dribbble</a>
+            <a href="#">Behance</a>
+            <a href="#">◎ Instagram</a>
+            <a href="#">▣ LinkedIn</a>
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+        <p>
+            © <a href="#">MyWebsite</a>. All rights reserved.
+        </p>
+
+        <div class="footer-policy">
+            <a href="index.html">Privacy Policy</a>
+            <a href="index.html">Terms of Service</a>
+            <a href="index.html">Cookie Policy</a>
+            <span>Made By Syed Fariz</span>
+        </div>
+
+    </div>
+
+</footer>
+</html>
