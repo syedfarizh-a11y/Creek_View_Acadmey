@@ -17,7 +17,7 @@ body {
     width: 100%;
 }
 
-.container {
+.containers {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -38,7 +38,7 @@ header {
     z-index: 100;
 }
 
-header .container {
+header .containers {
     display: flex;
     justify-content: space-between;
     align-items: center;
