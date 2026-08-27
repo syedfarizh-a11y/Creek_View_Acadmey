@@ -552,3 +552,9 @@ nav li a:hover {
         text-align: center;
     }
 }
+@media (max-width: 900px) {
+    .container {
+        width: 90%;
+        padding: 0 10px;
+        display: block;
+    }
