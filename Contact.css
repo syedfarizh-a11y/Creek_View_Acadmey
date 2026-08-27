@@ -133,7 +133,7 @@ nav li a:hover {
 }
 
 /* Desktop: Flex Row (Cards on Left, Form on Right) */
-.contact-section .container {
+.contact-section {
     display: flex;
     flex-direction: row;
     gap: 40px;
