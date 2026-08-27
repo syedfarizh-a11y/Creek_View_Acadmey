@@ -21,11 +21,7 @@ body {
     padding: 0 20px;
 }
 
-@media (max-width: 900px) {
-.container{
-   display:content;
 
-}
 /* =========================
    HEADER & NAVBAR
 ========================= */
@@ -435,6 +431,7 @@ nav li a:hover {
     .container {
         width: 90%;
         padding: 0 10px;
+       display: content ;
     }
 
     .contact-info {
@@ -556,9 +553,4 @@ nav li a:hover {
         text-align: center;
     }
 }
-@media (max-width: 900px) {
-    .container {
-        width: 90%;
-        padding: 0 10px;
-        display: block;
-    }
+
